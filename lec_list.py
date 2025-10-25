@@ -11,7 +11,7 @@ print(c)
 
 print(c * 8)
 
-с = с*8
+#с = с*8
 
 print(c)
 
