@@ -15,7 +15,7 @@ print('№3')
 
 a = int(input('Давай год: '))
 
-if a <= 0:
+if a <= 0 or (a % 100 == 0 and a % 400 >= 0):
     print()
     print('Я отрицаю существование этого года')
 elif a % 4 == 0:
@@ -36,10 +36,10 @@ if b == 0:
     print('Делить на нуль пока нельзя :(')
 elif a % b == 0:
     print()
-    print(f'{a} делится на {b}', a / b)
+    print(f'{a} делится на {b} без остатка')
 else:
     print()
-    print(f'{a} не делится на {b}', a % b)
+    print(f'{a} не делится на {b}с остатком {a % b}, a частное - {a / b}')
 
 # доп №1
 print('доп №1')
@@ -71,8 +71,8 @@ c = int(input('Давай третий отрезок: '))
 if a <= b + c and c <= b + a and b <= a + c:
     print('Не, брат, так не льзя')
 else:
-    if a = b:
-        if a = c:
+    if a == b:
+        if a == c:
             print('Равносторонний')
         else:
             print('Равнобедренный')
