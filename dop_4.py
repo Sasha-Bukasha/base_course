@@ -3,13 +3,9 @@ import numpy as np
 
 def lesenka(n):
     N = 1
-    for i in range(0, n, 1):
-        if i == n:
-            plt.plot(n)
-        else:
-            X = N + 1
-            y = N
-            N = N + 1
+    x = np.arange(0, n, 0.1)
+    y = x // 1
+    plt.plot(x, y, color='g')
     plt.savefig("lesenka.png")
     plt.close
     
