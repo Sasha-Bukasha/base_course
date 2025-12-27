@@ -9,6 +9,7 @@ def Zhezl_spir(k):
     y = r * np.sin(phi)
     
     plt.plot(x, y)
+    plt.axis('equal')
     plt.savefig("Zhezl_spir.png")
     plt.close
 
