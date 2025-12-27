@@ -1,15 +1,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Ваши точки (x, y)
-x_points = [0, 1, 2, 3, 4]
-y_points = [0, 2, 1, 3, 2]
 
-# Строим график
-plt.plot(x_points, y_points, marker='o') # marker='o' показывает точки
-plt.title("Кусочно-линейная кривая")
-plt.xlabel("X")
-plt.ylabel("Y")
-plt.grid(True)
-plt.show()
-plt.savefig('test.png')
+def circle_plotter(R=10):
+
+    x = np.arange(-2*R, 2*R, 0.1)
+    y = np.arange(-2*R, 2*R, 0.1)
+
+    # Переход к неявнозаданным координатам
+    X, Y = np.meshgrid(x, y)
+
+    fxy = X**2 + Y**2 - R**2  # Уравнение окружности
+
+    # Команда рисования
+    plt.contour(X, Y, fxy, levels=[0])
+    # plt.axis('equal')
+
+    plt.savefig('test.png')
